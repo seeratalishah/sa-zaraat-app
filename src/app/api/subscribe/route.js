@@ -1,7 +1,4 @@
 import { sendMailOptions, sendTranspoter } from "@/config/nodemailer";
-import fs from "fs";
-import path from "path";
-import handlebars from "handlebars";
 
 export async function POST(req) {
   try {
@@ -19,19 +16,19 @@ export async function POST(req) {
     }
 
     // Load and compile the welcome email template
-    const templatePath = path.join(
-      process.cwd(),
-      "src/emails/welcomeEmailTemplate.html"
-    );
-    const source = fs.readFileSync(templatePath, "utf8");
-    const template = handlebars.compile(source);
-    const emailHtml = template({ email });
+    // const templatePath = path.join(
+    //   process.cwd(),
+    //   "src/emails/welcomeEmailTemplate.html"
+    // );
+    // const source = fs.readFileSync(templatePath, "utf8");
+    // const template = handlebars.compile(source);
+    // const emailHtml = template({ email });
 
     await sendTranspoter.sendMail({
       ...sendMailOptions,
       to: email, // Send email to subscriber
       subject: "Welcome to Our Platform!",
-      html: emailHtml,
+      html: <p></p>,
     });
 
     console.log("Welcome email sent successfully");
