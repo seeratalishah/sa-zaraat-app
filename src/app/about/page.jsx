@@ -3,9 +3,9 @@ import Image from "next/image";
 import about from "@/images/mixed-products/about.jpg";
 import SectionHeading from "@/components/section-heading";
 
-import quality from "../../images/quality.png";
-import sustainability from "../../images/Sustainability.png";
-import innovation from "../../images/innovation.png";
+import quality from "@/images/quality.png";
+import sustainability from "@/images/sustainability.png";
+import innovation from "@/images/innovation.png";
 
 const AboutPage = () => {
   return (
