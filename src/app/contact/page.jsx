@@ -11,19 +11,26 @@ const ContactPage = () => {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false); // Loader state
+  const [success, setSuccess] = useState(false); // Success state
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add form submission logic here (API call, email sending, etc.)
+    setLoading(true);
+    setSuccess(false);
 
     try {
       await sendContactForm(formData);
+      setFormData({ name: "", email: "", subject: "", message: "" }); // Reset form
+      setSuccess(true);
     } catch (error) {
       console.log("Error", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -32,8 +39,7 @@ const ContactPage = () => {
       <div className="container">
         <SectionHeading title="Get in Touch" />
         <p className="text-[18px] font-normal leading-[24px] text-[#343a40] my-6 text-center">
-          Have any questions? Fill out the form below, and we'll get back to you
-          soon.
+          Have any questions? Fill out the form below, and we'll get back to you soon.
         </p>
 
         <div className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg border-t border-slate-100">
@@ -49,6 +55,7 @@ const ContactPage = () => {
                 placeholder="Enter your name"
                 className="w-full mt-2 px-4 py-3 border rounded-xl focus:ring-2 focus:ring-green-400 outline-none"
                 required
+                disabled={loading}
               />
             </div>
 
@@ -60,9 +67,10 @@ const ContactPage = () => {
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                placeholder="Enter your name"
+                placeholder="Enter subject"
                 className="w-full mt-2 px-4 py-3 border rounded-xl focus:ring-2 focus:ring-green-400 outline-none"
                 required
+                disabled={loading}
               />
             </div>
 
@@ -77,6 +85,7 @@ const ContactPage = () => {
                 placeholder="Enter your email"
                 className="w-full mt-2 px-4 py-3 border rounded-xl focus:ring-2 focus:ring-green-400 outline-none"
                 required
+                disabled={loading}
               />
             </div>
 
@@ -91,16 +100,25 @@ const ContactPage = () => {
                 rows="5"
                 className="w-full mt-2 px-4 py-3 border rounded-xl focus:ring-2 focus:ring-green-400 outline-none"
                 required
+                disabled={loading}
               />
             </div>
 
-            {/* Submit Button */}
+            {/* Submit Button with Loader */}
             <button
               type="submit"
-              className="w-full bg-green-600 text-white py-3 rounded-xl font-medium shadow-md hover:bg-green-700 hover:scale-105 transition-all"
+              className="w-full bg-green-600 text-white py-3 rounded-xl font-medium shadow-md hover:bg-green-700 hover:scale-105 transition-all disabled:bg-gray-400 disabled:cursor-not-allowed"
+              disabled={loading}
             >
-              Send Message
+              {loading ? "Sending..." : "Send Message"}
             </button>
+
+            {/* Success Message */}
+            {success && (
+              <p className="text-green-600 text-center font-medium mt-4">
+                ✅ Message sent successfully!
+              </p>
+            )}
           </form>
         </div>
       </div>

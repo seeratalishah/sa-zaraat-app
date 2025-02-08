@@ -28,7 +28,7 @@ export async function POST(req) {
       ...sendMailOptions,
       to: email, // Send email to subscriber
       subject: "Welcome to Our Platform!",
-      html: <p></p>,
+      html: <p>fgf</p>,
     });
 
     console.log("Welcome email sent successfully");
