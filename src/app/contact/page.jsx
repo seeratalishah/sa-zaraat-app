@@ -27,6 +27,11 @@ const ContactPage = () => {
       await sendContactForm(formData);
       setFormData({ name: "", email: "", subject: "", message: "" }); // Reset form
       setSuccess(true);
+
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        setSuccess(false);
+      }, 5000);
     } catch (error) {
       console.log("Error", error);
     } finally {
@@ -39,7 +44,8 @@ const ContactPage = () => {
       <div className="container">
         <SectionHeading title="Get in Touch" />
         <p className="text-[18px] font-normal leading-[24px] text-[#343a40] my-6 text-center">
-          Have any questions? Fill out the form below, and we'll get back to you soon.
+          Have any questions? Fill out the form below, and we'll get back to you
+          soon.
         </p>
 
         <div className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg border-t border-slate-100">
