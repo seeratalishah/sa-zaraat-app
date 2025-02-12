@@ -1,9 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-      domains: [], // No need for domains when using local images
-    },
-  };
-  
-  export default nextConfig;
-  
+  output: "export",
+  images: {
+    unoptimized: true,
+    dangerouslyAllowSVG: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
+};
+
+export default nextConfig;
