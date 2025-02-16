@@ -14,7 +14,7 @@ const Footer = () => {
                 Our Moto
               </h3>
               <p className="text-sm">
-                SA Zaraat & Fisheries – Nurturing Growth, Light Upon Light in
+                SAZaraat & Fisheries – Nurturing Growth, Light Upon Light in
                 Agriculture and Aquaculture.
               </p>
             </div>
@@ -114,7 +114,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="mt-12 text-center">
           <p className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} SA ZARAAT & FISHERIES. All rights
+            &copy; {new Date().getFullYear()} SAZARAAT & FISHERIES. All rights
             reserved.
           </p>
         </div>

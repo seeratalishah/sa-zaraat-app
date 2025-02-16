@@ -10,7 +10,7 @@ import "swiper/css/effect-fade";
 import Image from "next/image";
 import almonds from "@/images/products/almond.jpg";
 import bellPepper from "@/images/products/bell-peper.png";
-import coffee from "@/images/products/coffee.png";
+import coffee from "@/images/mixed-products/white-rice.webp";
 import cumin from "@/images/products/cumin.png";
 import onion from "@/images/products/onion.png";
 import pepper from "@/images/products/pepper.png";
@@ -22,10 +22,10 @@ import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
 const products = [
   { id: 1, image: almonds, name: "Almonds" },
   { id: 2, image: bellPepper, name: "Bell Pepper" },
-  { id: 3, image: coffee, name: "Coffee" },
-  { id: 4, image: cumin, name: "Onion" },
-  { id: 5, image: onion, name: "Pepper" },
-  { id: 6, image: pepper, name: "Potatos" },
+  { id: 3, image: coffee, name: "Rice" },
+  { id: 4, image: cumin, name: "Cumin" },
+  { id: 5, image: onion, name: "Onion" },
+  { id: 6, image: pepper, name: "Chili" },
   { id: 7, image: wallnut, name: "Wallnuts" },
   { id: 8, image: potatos, name: "Potatos" },
 ];

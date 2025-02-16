@@ -34,7 +34,7 @@ const Navbar = () => {
             className="cursor-pointer rounded-full"
             priority
           />
-            <h1 className="text-green-800 text-sm md:text-lg">SA ZARAAT & FISHERIES</h1>
+            <h1 className="text-green-800 text-sm md:text-lg">SAZARAAT & FISHERIES</h1>
         </Link>
 
         {/* Desktop Menu */}

@@ -23,7 +23,7 @@ const AboutPage = () => {
       <div className="container text-center bg-white mt-24">
         <SectionHeading title="Who We Are" />
         <p className="text-[16px] font-normal leading-[24px] text-[#343a40] mt-10">
-          SA ZARAAT & FISHERIES is a trusted provider of high-quality
+          SAZARAAT & FISHERIES is a trusted provider of high-quality
           agricultural products and fisheries, dedicated to supporting farmers,
           fishers, and communities worldwide. We specialize in a wide range of
           agricultural goods, including fresh fruits, vegetables, grains, and
