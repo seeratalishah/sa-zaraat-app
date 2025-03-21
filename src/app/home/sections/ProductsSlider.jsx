@@ -27,7 +27,7 @@ import turmericPowder from "@/images/agriculture/spices/turmeric.jpg";
 import whiteChickpeas from "@/images/agriculture/pulses/white-chickpeas.webp";
 import sunflowerSeeds from "@/images/agriculture/oil-seeds/sunflower-seeds.jpg";
 import organicDryApricots from "@/images/agriculture/dehydrated-products/organic-dry-apricots.jpg";
-import SectionHeading from "@/layout/SectionHeading";
+import SectionHeading from "@/components/SectionHeading";
 
 const products = [
   { id: 1, image: mangoes, name: "Mangoes" },

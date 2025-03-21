@@ -11,7 +11,7 @@ import oilseeds from "@/images/ranges/oilseeds.jpg";
 import pulses from "@/images/ranges/pulses.webp";
 import vegetables from "@/images/ranges/veges.jpg";
 import fisheries from "@/images/ranges/fish.jpg";
-import SectionHeading from "@/layout/SectionHeading";
+import SectionHeading from "@/components/SectionHeading";
 
 const products = [
   { image: dehydrated, name: "Dehydrated Products" },

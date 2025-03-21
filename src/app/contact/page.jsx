@@ -1,5 +1,5 @@
 "use client";
-import SectionHeading from "@/layout/SectionHeading";
+import SectionHeading from "@/components/SectionHeading";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";

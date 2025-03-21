@@ -1,6 +1,6 @@
 "use client";
 
-import SectionHeading from "@/layout/SectionHeading";
+import SectionHeading from "@/components/SectionHeading";
 
 const GoogleAddressSection = () => {
   return (

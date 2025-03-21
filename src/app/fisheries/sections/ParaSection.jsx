@@ -1,4 +1,4 @@
-import SectionHeading from "@/layout/SectionHeading";
+import SectionHeading from "@/components/SectionHeading";
 
 export default function ParagraphSection() {
   return (

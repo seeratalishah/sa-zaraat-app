@@ -3,7 +3,7 @@ import React from "react";
 import quality from "@/images/general/quality.png";
 import sustainability from "@/images/general/sustainability.png";
 import innovation from "@/images/general/innovation.png";
-import SectionHeading from "@/layout/SectionHeading";
+import SectionHeading from "@/components/SectionHeading";
 
 const CoreValues = () => {
   return (

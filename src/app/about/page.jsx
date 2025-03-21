@@ -1,8 +1,8 @@
 import PromoSection from "./sections/PromoSection";
 import FeaturesSection from "./sections/FeaturesSection";
 import HeroSection from "./sections/HeroSection";
-import WhoWeAre from "./sections/WhoWeAre";
 import CoreValues from "./sections/CoreValues";
+import WhoWeAre from "./sections/WhoWeAre";
 
 const AboutPage = () => {
   return (
