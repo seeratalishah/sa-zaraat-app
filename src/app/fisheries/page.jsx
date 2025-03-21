@@ -1,16 +1,15 @@
-import FisheryProductsPage from "@/components/fisheries";
-import HeroSection from "@/components/fisheries-hero-section";
-import FisheriesMainSection from "@/components/fisheries-main-section";
-import FisheriesParagraphSection from "@/components/fisheries-para-section";
-import FisheriesSlider from "@/components/fisheries-slider";
 import React from "react";
+import FisheryProductsPage from "./sections/FisheryProductsPage";
+import HeroSection from "./sections/HeroSection";
+import FisheriesMainSection from "./sections/FisheriesMainSection";
+import ParagraphSection from "./sections/ParaSection";
 
 const Fisheries = () => {
   return (
     <div>
       <HeroSection />
       <FisheriesMainSection />
-      <FisheriesParagraphSection />
+      <ParagraphSection />
       <FisheryProductsPage />
     </div>
   );

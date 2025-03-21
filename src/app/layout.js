@@ -1,9 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import NavBar from "@/components/navbar";
-import EmailBanner from "@/components/banner";
-import GoogleAddressSection from "@/components/google-maps";
-import Footer from "@/components/footer/Footer";
+import Navbar from "@/layout/Navbar";
+import EmailBanner from "@/layout/EmailBanner";
+import GoogleAddressSection from "@/layout/GoogleAddressSection";
+import Footer from "@/layout/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="flex flex-col font-poppins">
-          <NavBar />
+          <Navbar />
           <div className="mt-[96px]">{children}</div>
           <EmailBanner />
           <GoogleAddressSection />

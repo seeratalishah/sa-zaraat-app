@@ -1,21 +1,17 @@
-import EmailBanner from "@/components/banner";
-import Footer from "@/components/footer/Footer";
-import GoogleAddressSection from "@/components/google-maps";
-import HeroSlider from "@/components/hero-slider";
-import ParagraphSection from "@/components/paragraph-section";
-import ProductsRange from "@/components/products-range";
-import ProductsSlider from "@/components/products-slider";
-import TextImageSection from "@/components/text-image";
-import Slider from "@/components/new-slider/index"
+import HeroSlider from "./home/sections/HeroSlider";
+import ParagraphSection from "./home/sections/ParaSection";
+import ProductsSlider from "./home/sections/ProductsSlider";
+import ProductsRange from "./home/sections/ProductsRange";
+import TextImageSection from "./home/sections/TextImageSection";
 
 export default function Home() {
   return (
-   <div className="flex flex-col">
-    <HeroSlider />
-    <ParagraphSection />
-    <ProductsSlider />
-    <ProductsRange />
-    <TextImageSection />
-   </div>
+    <div>
+      <HeroSlider />
+      <ParagraphSection />
+      <ProductsSlider />
+      <ProductsRange />
+      <TextImageSection />
+    </div>
   );
 }

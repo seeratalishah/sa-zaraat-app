@@ -1,5 +1,5 @@
 "use client";
-import SectionHeading from "@/components/section-heading";
+import SectionHeading from "@/layout/SectionHeading";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
@@ -20,7 +20,12 @@ const ContactPage = () => {
     }
 
     emailjs
-      .sendForm("service_x8jelyn", "template_n2one4e", form.current, "ursEyN8TxWLd7bmTm")
+      .sendForm(
+        "service_x8jelyn",
+        "template_n2one4e",
+        form.current,
+        "ursEyN8TxWLd7bmTm"
+      )
       .then(
         () => {
           toast.success("Submitted Successfully! ✅");
@@ -41,7 +46,8 @@ const ContactPage = () => {
       <div className="container">
         <SectionHeading title="Get in Touch" />
         <p className="text-[18px] font-normal leading-[24px] text-[#343a40] my-6 text-center">
-          Have any questions? Fill out the form below, and we'll get back to you soon.
+          Have any questions? Fill out the form below, and we'll get back to you
+          soon.
         </p>
 
         <div className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg border-t border-slate-100">
