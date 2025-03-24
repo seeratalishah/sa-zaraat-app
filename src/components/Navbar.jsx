@@ -17,11 +17,13 @@ const Navbar = () => {
 
   const menuItems = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Agriculture", path: "/agriculture" },
-    { name: "Fisheries", path: "/fisheries" },
-    { name: "Contact", path: "/contact" },
+    { name: "About", path: "/about/" },
+    { name: "Agriculture", path: "/agriculture/" },
+    { name: "Fisheries", path: "/fisheries/" },
+    { name: "Contact", path: "/contact/" },
   ];
+
+  console.log("Current pathname:", pathname);
 
   return (
     <nav className="fixed w-full h-24 shadow-xl bg-white z-10 px-4">
